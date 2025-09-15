@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Monitoring Dashboard</title>
+  <!-- Bootstrap via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff0f6; /* pink muda */
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d63384 !important; /* pink tua */
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .card {
+      border-radius: 0.8rem;
+      border: 1px solid #f8c2d8;
+      background-color: #fff; 
+    }
+    .value {
+      font-size: 22px;
+      font-weight: bold;
+      color: #d63384;
+    }
+    .progress-bar {
+      background-color: #d63384;
+    }
+    h3 {
+      color: #a61e4d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Smart Home Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Monitoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container my-4">
+    <h3 class="mb-4">Monitoring</h3>
+    <div class="row g-3">
+      
+      <!-- Suhu -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-thermometer-half fs-1 text-danger"></i>
+          <h6>Suhu Ruangan</h6>
+          <p class="value">27 °C</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 54%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kelembaban -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-droplet-half fs-1 text-info"></i>
+          <h6>Kelembaban</h6>
+          <p class="value">60 %</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Konsumsi Listrik -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-lightning-charge fs-1 text-warning"></i>
+          <h6>Konsumsi Listrik</h6>
+          <p class="value">1.2 kWh</p>
+        </div>
+      </div>
+
+      <!-- Status Pintu -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-door-closed fs-1 text-success"></i>
+          <h6>Status Pintu</h6>
+          <p class="value">Tertutup</p>
+        </div>
+      </div>
+
+      <!-- Kualitas Udara -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-wind fs-1 text-secondary"></i>
+          <h6>Kualitas Udara</h6>
+          <p class="value">Baik</p>
+        </div>
+      </div>
+
+      <!-- Gas Sensor -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-exclamation-triangle fs-1 text-danger"></i>
+          <h6>Kadar Gas</h6>
+          <p class="value">Normal</p>
+        </div>
+      </div>
+
+      <!-- Intensitas Cahaya -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-brightness-high fs-1 text-warning"></i>
+          <h6>Cahaya</h6>
+          <p class="value">300 Lux</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamera CCTV -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card p-3 text-center">
+          <i class="bi bi-camera-video fs-1 text-dark"></i>
+          <h6>CCTV</h6>
+          <p class="value">Aktif</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
